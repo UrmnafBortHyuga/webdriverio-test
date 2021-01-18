@@ -33,19 +33,21 @@ Emitted 'error' event on ChildProcess instance at:
 ```
 https://qiita.com/higherKindPudding/items/f2b4c11b50b34508b64f
 
-![キャプチャ.PNG](:/192307815301c7ce9d41de495f3907a1)
+![キャプチャ.PNG](./cap01.png)
 
 - https://chromedriver.chromium.org/downloads
 - https://chromedriver.storage.googleapis.com/index.html?path=86.0.4240.22/
+  - winは32bitのchromedriverしかないです。
 
-[chromedriver_win32.zip](https://chromedriver.storage.googleapis.com/86.0.4240.22/chromedriver_win32.zip)
-```
-mkdir C:\src\hubcom\UrmnafBortHyuga\webdriverio-test
-ode_modules\chromedriver\lib\chromedriver
+[chromedriver_win32.zip](https://chromedriver.storage.googleapis.com/86.0.4240.22/chromedriver_win32.zip)⇒解凍して`chromedriver.exe`を用意
 
-mv chromedriver.exe  **C:\src\hubcom\UrmnafBortHyuga**\webdriverio-test
-ode_modules\chromedriver\lib\chromedriver
+フォルダ作成と`chromedriver.exe`の移動
 ```
+mkdir C:\src\hubcom\UrmnafBortHyuga\webdriverio-test\node_modules\chromedriver\lib\chromedriver
+
+mv chromedriver.exe  C:\Fujitsu\joji\src\hubcom\UrmnafBortHyuga\webdriverio-test\node_modules\chromedriver\lib\chromedriver
+```
+`./test/basic.js`
 ```
 describe('webdriver.io page', () => {
   it('should have the right title', () => {
@@ -54,3 +56,5 @@ describe('webdriver.io page', () => {
     browser.saveScreenshot('./some/path/screenshot.png');
   })
 ```
+
+
